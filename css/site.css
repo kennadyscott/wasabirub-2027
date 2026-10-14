@@ -275,3 +275,27 @@ html[data-typeface="editorial"] :is(.hero h1,.band h2,.idea h2,.idea-foot,.range
 html[data-typeface="classic"] :is(.hero h1,.band h2,.idea h2,.idea-foot,.range h2,.shop-head h2,.rung h3,.card h3,.card .price,.cred h2,.belong h2,.pdp-copy h1,.feel h2,.feel-step h3,.pdp-reviews h2,.cross h2,.foot-tag,.serif){font-weight:500;letter-spacing:-.02em}
 
 .wm .wr{color:#fff}
+
+/* ===== HERO VARIANTS (prototype: data-hero on <html>) ===== */
+.hero{position:relative;overflow:hidden}
+.hero-bg{display:none}
+.hero .wrap,.hero-copy,.jar-vis{position:relative;z-index:2}
+/* A · product placement (default) — copy left, jar on glow right (base .hero styles already do this) */
+/* B · lifestyle — full-bleed photo, copy overlaid */
+html[data-hero="lifestyle"] .hero{min-height:clamp(560px,78vh,760px);display:grid;align-items:center;padding:0}
+html[data-hero="lifestyle"] .hero-bg{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+html[data-hero="lifestyle"] .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,32,25,.9),rgba(4,32,25,.6) 52%,rgba(4,32,25,.25))}
+html[data-hero="lifestyle"] .hero-grid{grid-template-columns:1fr}
+html[data-hero="lifestyle"] .hero-copy{max-width:680px}
+html[data-hero="lifestyle"] .jar-vis{display:none}
+/* C · split — copy left on green, photo right half */
+html[data-hero="split"] .hero-grid{grid-template-columns:minmax(0,560px)}
+html[data-hero="split"] .hero-bg{display:block;position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;z-index:0}
+html[data-hero="split"] .hero::after{content:"";position:absolute;right:48%;top:0;width:160px;height:100%;z-index:1;background:linear-gradient(90deg,var(--green),rgba(4,52,42,0))}
+html[data-hero="split"] .jar-vis{display:none}
+@media(max-width:860px){html[data-hero="split"] .hero-bg{position:relative;width:100%;height:240px;margin-top:20px}html[data-hero="split"] .hero::after{display:none}}
+/* D · product + photo — jar over a darkened lifestyle backdrop */
+html[data-hero="onphoto"] .hero-bg{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+html[data-hero="onphoto"] .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(rgba(4,32,25,.6),rgba(4,32,25,.78))}
+html[data-hero="onphoto"] .jar-disc{background:radial-gradient(circle at 50% 46%,rgba(218,252,146,.22),transparent 60%)}
+html[data-hero="onphoto"] .hero-sub{color:#e8f3ea}
