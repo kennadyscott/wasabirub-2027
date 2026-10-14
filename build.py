@@ -29,7 +29,7 @@ FOOTER='''<footer><div class="wrap">
 </div></footer>'''
 
 def page(title, active, main):
-    return f'''<!doctype html><html lang="en"><head>
+    return f'''<!doctype html><html lang="en" data-hero="split"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="robots" content="noindex,nofollow">
