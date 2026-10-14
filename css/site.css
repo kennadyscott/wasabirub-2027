@@ -273,3 +273,5 @@ html[data-nums="on"] section.sec-pad::before{counter-increment:secn;content:coun
 .hero h1,.band h2,.idea h2,.idea-foot,.range h2,.shop-head h2,.rung h3,.card h3,.card .price,.cred h2,.belong h2,.pdp-copy h1,.feel h2,.feel-step h3,.pdp-reviews h2,.cross h2,.foot-tag,.serif{font-weight:700;letter-spacing:-.03em}
 html[data-typeface="editorial"] :is(.hero h1,.band h2,.idea h2,.idea-foot,.range h2,.shop-head h2,.rung h3,.card h3,.card .price,.cred h2,.belong h2,.pdp-copy h1,.feel h2,.feel-step h3,.pdp-reviews h2,.cross h2,.foot-tag,.serif),
 html[data-typeface="classic"] :is(.hero h1,.band h2,.idea h2,.idea-foot,.range h2,.shop-head h2,.rung h3,.card h3,.card .price,.cred h2,.belong h2,.pdp-copy h1,.feel h2,.feel-step h3,.pdp-reviews h2,.cross h2,.foot-tag,.serif){font-weight:500;letter-spacing:-.02em}
+
+.wm .wr{color:#fff}

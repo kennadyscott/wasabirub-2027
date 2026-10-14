@@ -10,7 +10,7 @@ def nav(active):
 <span>MADE FOR EVERY BODY THAT MOVES</span><span>•</span><span>PAIN RELIEF THAT KEEPS YOU MOVING</span><span>•</span><span>MOVE SERIOUSLY. LIVE PLAYFULLY.</span><span>•</span><span>BELONG IN MOTION</span><span>•</span><span>MADE FOR EVERY BODY THAT MOVES</span><span>•</span><span>PAIN RELIEF THAT KEEPS YOU MOVING</span><span>•</span><span>MOVE SERIOUSLY. LIVE PLAYFULLY.</span><span>•</span>
 </div></div>
 <nav class="bar"><div class="wrap bar-in">
-  <a class="wm" href="index.html">wasabirub<sup>&reg;</sup></a>
+  <a class="wm" href="index.html">wasabi<span class="wr">rub<sup>&reg;</sup></span></a>
   <div class="links">{a("shop.html","The rubs","shop")}{a("index.html#idea","The idea","idea")}{a("index.html#cred","Why trust it","cred")}{a("index.html#belong","The movement","move")}</div>
   <span class="spacer"></span>
   <a class="pill-btn" href="shop.html">Shop &rarr;</a>
@@ -19,7 +19,7 @@ def nav(active):
 FOOTER='''<footer><div class="wrap">
   <span class="concept-flag">2027 Direction concept &middot; secondary site option &middot; not the live site</span>
   <div class="foot-top">
-    <div><span class="wm">wasabirub<sup>&reg;</sup></span><p class="foot-tag">pain relief that keeps you moving.</p></div>
+    <div><span class="wm">wasabi<span class="wr">rub<sup>&reg;</sup></span></span><p class="foot-tag">pain relief that keeps you moving.</p></div>
     <div class="foot-cols">
       <div class="foot-col"><h4>Shop</h4><a href="product-wasabirub.html">WasabiRub</a><a href="product-super-hot.html">Super Hot</a><a href="product-super-cold.html">Super Cold</a><a href="shop.html">All rubs</a></div>
       <div class="foot-col"><h4>Brand</h4><a href="index.html#idea">The idea</a><a href="index.html#cred">Why trust it</a><a href="index.html#belong">The movement</a></div>
@@ -33,14 +33,11 @@ def page(title, active, main):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="robots" content="noindex,nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Archivo:ital,wght@0,500;0,700;0,900;1,900&family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Jost:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 </head><body>
 {nav(active)}
 {main}
 {FOOTER}
-<script src="proto.js" defer></script>
 </body></html>'''
 
 PRODUCTS={
@@ -79,7 +76,7 @@ home=f'''<header class="hero"><div class="wrap hero-grid">
     <div class="badges"><span class="badge"><b>&check;</b> Pharmacist formulated</span><span class="badge"><b>&check;</b> TruShield Certified</span><span class="badge"><b>&check;</b> Tested for sport</span></div>
   </div>
   <div class="jar-vis"><span class="jar-disc"></span><span class="jar-shadow"></span><span class="geo g1">34.0195&deg;N</span><span class="geo g2">IN MOTION</span>
-    <img id="hero-jar" src="assets/jar-hot.png" alt="WasabiRub Super Hot jar"></div>
+    <img id="hero-jar" src="assets/jar-og.png" alt="WasabiRub Original jar"></div>
 </div></header>
 
 <section class="band"><img id="band-photo" src="assets/life-finish.jpg" alt="Runners celebrating at a sunny finish line">
