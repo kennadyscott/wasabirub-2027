@@ -12,10 +12,30 @@ def nav(active):
 </div></div>
 <nav class="bar"><div class="wrap bar-in">
   <a class="wm" href="index.html">wasabi<span class="wr">rub<sup>&reg;</sup></span></a>
-  <div class="links">{a("wasabirub-shop.html","Shop","shop")}{a("how-it-works.html","Why WasabiRub","why")}{a("quality.html","Quality","quality")}{a("articles.html","Articles","articles")}<a href="https://sportpharm.com" target="_blank" rel="noopener">For Pros &#8599;</a></div>
+  <div class="links">
+    <div class="menu"><a class="menu-top{' on' if active=='shop' else ''}" href="wasabirub-shop.html">Shop <span class="caret">&#9662;</span></a>
+      <div class="dropdown shop-dd">
+        <a class="dd-item" href="wasabirub.html"><span class="dd-thumb"><img src="assets/jar-og.png" alt=""></span><span class="dd-txt"><b>WasabiRub</b><small>Balanced cool + heat</small></span></a>
+        <a class="dd-item" href="wasabirub-super-hot.html"><span class="dd-thumb"><img src="assets/jar-hot.png" alt=""></span><span class="dd-txt"><b>Super Hot</b><small>Maximum warming relief</small></span></a>
+        <a class="dd-item" href="wasabirub-super-cold.html"><span class="dd-thumb"><img src="assets/jar-cold.png" alt=""></span><span class="dd-txt"><b>Super Cold</b><small>Pure cooling relief</small></span></a>
+        <span class="dd-item is-soon"><span class="dd-thumb"></span><span class="dd-txt"><b>LidoRub</b><small>Coming soon</small></span></span>
+        <a class="dd-all" href="wasabirub-shop.html">Shop all rubs <span>&rarr;</span></a>
+      </div></div>
+    {a("how-it-works.html","Why WasabiRub","why")}{a("quality.html","Quality","quality")}{a("articles.html","Articles","articles")}<a href="https://sportpharm.com" target="_blank" rel="noopener">For Pros &#8599;</a></div>
   <span class="spacer"></span>
-  <span class="nav-right"><a class="pill-btn" href="wasabirub-shop.html">Shop &rarr;</a></span>
-</div></nav>'''
+  <span class="nav-right"><a class="pill-btn" href="wasabirub-shop.html">Shop &rarr;</a><button class="mnav-btn" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button></span>
+</div></nav>
+<div id="mnav" class="mnav" role="dialog" aria-label="Menu" hidden>
+  <button class="mnav-x" type="button" aria-label="Close menu">&times;</button>
+  <a href="wasabirub-shop.html">Shop</a>
+  <a class="sub" href="wasabirub.html">WasabiRub</a>
+  <a class="sub" href="wasabirub-super-hot.html">Super Hot</a>
+  <a class="sub" href="wasabirub-super-cold.html">Super Cold</a>
+  <a href="how-it-works.html">Why WasabiRub</a>
+  <a href="quality.html">Quality</a>
+  <a href="articles.html">Articles</a>
+  <a href="https://sportpharm.com" target="_blank" rel="noopener">For Professionals &#8599;</a>
+</div>'''
 
 FOOTER='''<footer><div class="wrap">
   <div class="foot-top">
@@ -58,6 +78,7 @@ def page(title, active, main, head_extra="", scripts_extra=""):
 {nav(active)}
 {main}
 {FOOTER}
+<script src="assets/js/nav.js" defer></script>
 <script src="assets/js/cart.js" defer></script>
 <script src="assets/js/popup.js" defer></script>
 <script src="assets/js/reviews.js" defer></script>{scripts_extra}

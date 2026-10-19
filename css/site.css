@@ -546,3 +546,54 @@ html[data-hero="onphoto"] .hero-sub{color:#e8f3ea}
 .notebox{margin:18px 0;padding:18px 22px;background:rgba(4,52,42,.05);border-left:4px solid var(--lime);border-radius:0 12px 12px 0;font-size:14.5px;line-height:1.65;color:#2e3f38}
 .shipstrip{margin:0 0 24px;padding:16px 20px;background:var(--green);color:#fff;border-radius:14px;font-size:15px;text-align:center}
 .shipstrip b{color:var(--lime)}
+
+/* ===================================================================
+   NAV: SHOP product dropdown (desktop hover/focus) + mobile menu
+   =================================================================== */
+.bar .links{align-items:center}
+.menu{position:relative;display:flex;align-items:center}
+.menu-top{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.menu-top .caret{font-size:9px;transition:transform .2s}
+.menu:hover .menu-top .caret,.menu:focus-within .menu-top .caret{transform:rotate(180deg)}
+.dropdown.shop-dd{position:absolute;top:calc(100% + 10px);left:-16px;min-width:308px;
+  background:var(--green-900);border:1px solid rgba(218,252,146,.18);
+  box-shadow:0 26px 54px rgba(0,0,0,.5);border-radius:16px;padding:10px;
+  display:flex;flex-direction:column;gap:2px;
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s,transform .18s;z-index:140}
+.menu:hover .dropdown.shop-dd,.menu:focus-within .dropdown.shop-dd{opacity:1;visibility:visible;transform:translateY(0)}
+/* hover bridge so the menu doesn't close in the gap */
+.menu::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px}
+.shop-dd .dd-item{display:flex;align-items:center;gap:13px;padding:10px;border-radius:11px;color:var(--ongreen);letter-spacing:0}
+.shop-dd a.dd-item:hover{background:rgba(218,252,146,.08)}
+.shop-dd .dd-thumb{flex:none;width:50px;height:50px;border-radius:10px;background:var(--paper);display:grid;place-items:center;overflow:hidden}
+.shop-dd .dd-thumb img{width:88%;height:88%;object-fit:contain}
+.shop-dd .dd-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.shop-dd .dd-txt b{font-size:14px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.shop-dd .dd-txt small{font-size:12px;color:#a9c4b4;font-weight:400}
+.shop-dd .is-soon{opacity:.55;cursor:default}
+.shop-dd .is-soon .dd-thumb{background:rgba(255,255,255,.05);border:1px dashed rgba(218,252,146,.3)}
+.shop-dd .dd-all{display:flex;align-items:center;justify-content:space-between;margin-top:6px;
+  padding:13px 10px 6px;border-top:1px solid rgba(218,252,146,.14);font-weight:700;font-size:13px;letter-spacing:.03em;color:var(--lime)}
+.shop-dd .dd-all span{font-size:16px}
+
+/* hamburger + mobile menu */
+.mnav-btn{display:none;background:none;border:0;color:var(--ongreen);font-size:21px;line-height:1;cursor:pointer;padding:4px 4px 4px 8px}
+.mnav-btn:hover{color:var(--lime)}
+.mnav{position:fixed;inset:0 0 0 auto;width:min(84vw,340px);z-index:300;
+  background:var(--green-900);box-shadow:-24px 0 60px rgba(0,0,0,.55);
+  padding:76px 26px 30px;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+.mnav[hidden]{display:none}
+.mnav-x{position:absolute;top:18px;right:18px;background:none;border:0;color:var(--ongreen);font-size:30px;line-height:1;cursor:pointer}
+.mnav-x:hover{color:var(--lime)}
+.mnav a{font-size:19px;font-weight:700;color:#fff;padding:13px 0;border-bottom:1px solid rgba(218,252,146,.1)}
+.mnav a.sub{font-size:15px;font-weight:600;color:#cfe3d6;padding-left:16px;border-bottom:1px solid rgba(218,252,146,.06)}
+.mnav a:hover{color:var(--lime)}
+html.mnav-open{overflow:hidden}
+
+@media(max-width:840px){
+  .bar .links{display:none}
+  .mnav-btn{display:inline-flex;align-items:center}
+}
+@media(max-width:560px){
+  .bar .pill-btn{display:none}
+}
