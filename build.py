@@ -94,10 +94,10 @@ def card(k, buy=False):
 </article>'''
 
 BUNDLES=[
- {"id":"fire-ice-duo","name":"Fire &amp; Ice Duo","price":"64.99","was":"79.90","thumb":"bundle-fire-ice-thumb.webp","contains":"1 Super Hot &middot; 1 Super Cold","desc":"Max heat meets pure cooling — the two strongest sensations, together."},
- {"id":"og-heat-duo","name":"OG Heat Duo","price":"59.99","was":"69.90","thumb":"bundle-og-heat-thumb.webp","contains":"1 Original &middot; 1 Super Hot","desc":"Double the heat, double the recovery — balanced relief plus intensified warmth."},
- {"id":"recovery-duo","name":"Recovery Duo","price":"64.99","was":"69.90","thumb":"bundle-recovery-thumb.webp","contains":"1 Original &middot; 1 Super Cold","desc":"Warm and cool in one kit — support for warm-up and recovery alike."},
- {"id":"team-trifecta","name":"Team Trifecta","price":"269.95","was":"329.55","thumb":"bundle-trifecta-thumb.webp","contains":"3 Original &middot; 3 Super Hot &middot; 3 Super Cold","desc":"Stock the whole training room — all three rubs, three deep."},
+ {"id":"fire-ice-duo","name":"Fire &amp; Ice Duo","price":"64.99","was":"79.90","thumb":"bundle-fire-ice.png","contains":"1 Super Hot &middot; 1 Super Cold","desc":"Max heat meets pure cooling — the two strongest sensations, together."},
+ {"id":"og-heat-duo","name":"OG Heat Duo","price":"59.99","was":"69.90","thumb":"bundle-og-heat.png","contains":"1 Original &middot; 1 Super Hot","desc":"Double the heat, double the recovery — balanced relief plus intensified warmth."},
+ {"id":"recovery-duo","name":"Recovery Duo","price":"64.99","was":"69.90","thumb":"bundle-recovery.png","contains":"1 Original &middot; 1 Super Cold","desc":"Warm and cool in one kit — support for warm-up and recovery alike."},
+ {"id":"team-trifecta","name":"Team Trifecta","price":"269.95","was":"329.55","thumb":"bundle-trifecta.png","contains":"3 Original &middot; 3 Super Hot &middot; 3 Super Cold","desc":"Stock the whole training room — all three rubs, three deep."},
 ]
 def bundle_card(b):
     return f'''<article class="card bundle">
