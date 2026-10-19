@@ -4,7 +4,7 @@
 (function () {
   "use strict";
   var KEY = "wrhero";
-  var DEF = { hero: "split", photo: "finish", collapsed: false, hidden: false };
+  var DEF = { hero: "split", photo: "cycle", collapsed: false, hidden: false };
   function load() { var s = {}; try { s = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {} var o = {}; for (var k in DEF) o[k] = (k in s) ? s[k] : DEF[k]; return o; }
   function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
 
