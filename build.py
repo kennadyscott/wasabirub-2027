@@ -82,7 +82,6 @@ def page(title, active, main, head_extra="", scripts_extra=""):
 <script src="assets/js/cart.js" defer></script>
 <script src="assets/js/popup.js" defer></script>
 <script src="assets/js/reviews.js" defer></script>{scripts_extra}
-<script src="proto.js" defer></script>
 </body></html>'''
 
 PRODUCTS={
