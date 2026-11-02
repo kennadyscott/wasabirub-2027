@@ -15,9 +15,9 @@ def nav(active):
   <div class="links">
     <div class="menu"><a class="menu-top{' on' if active=='shop' else ''}" href="wasabirub-shop.html">Shop <span class="caret">&#9662;</span></a>
       <div class="dropdown shop-dd">
-        <a class="dd-item" href="wasabirub.html"><span class="dd-thumb"><img src="assets/jar-og.png" alt=""></span><span class="dd-txt"><b>WasabiRub</b><small>Balanced cool + heat</small></span></a>
-        <a class="dd-item" href="wasabirub-super-hot.html"><span class="dd-thumb"><img src="assets/jar-hot.png" alt=""></span><span class="dd-txt"><b>Super Hot</b><small>Maximum warming relief</small></span></a>
-        <a class="dd-item" href="wasabirub-super-cold.html"><span class="dd-thumb"><img src="assets/jar-cold.png" alt=""></span><span class="dd-txt"><b>Super Cold</b><small>Pure cooling relief</small></span></a>
+        <a class="dd-item" href="wasabirub.html"><span class="dd-thumb"><img src="assets/jar-og.webp" alt=""></span><span class="dd-txt"><b>WasabiRub</b><small>Balanced cool + heat</small></span></a>
+        <a class="dd-item" href="wasabirub-super-hot.html"><span class="dd-thumb"><img src="assets/jar-hot.webp" alt=""></span><span class="dd-txt"><b>Super Hot</b><small>Maximum warming relief</small></span></a>
+        <a class="dd-item" href="wasabirub-super-cold.html"><span class="dd-thumb"><img src="assets/jar-cold.webp" alt=""></span><span class="dd-txt"><b>Super Cold</b><small>Pure cooling relief</small></span></a>
         <span class="dd-item is-soon"><span class="dd-thumb"></span><span class="dd-txt"><b>LidoRub</b><small>Coming soon</small></span></span>
         <a class="dd-all" href="wasabirub-shop.html">Shop all rubs <span>&rarr;</span></a>
       </div></div>
@@ -85,15 +85,15 @@ def page(title, active, main, head_extra="", scripts_extra=""):
 </body></html>'''
 
 PRODUCTS={
- "og":{"name":"WasabiRub","file":"wasabirub.html","id":"original","sku":"WASABIRUB","jar":"jar-og.png","cls":"og","tag":"Everyday","move":"Cool + heat","price":"29.95","em":"everyday.",
+ "og":{"name":"WasabiRub","file":"wasabirub.html","id":"original","sku":"WASABIRUB","jar":"jar-og.webp","cls":"og","tag":"Everyday","move":"Cool + heat","price":"29.95","em":"everyday.",
    "tagline":"The original triple-action rub — balanced cooling and warming for the aches of everyday movement.",
    "actives":[("Menthol","10%","Cools"),("Capsaicin",".0375%","Warms"),("Methyl Salicylate","20%","Targets")],
    "band":"life-stretch.jpg","band_line":"For the people who keep <em>coming back.</em>"},
- "hot":{"name":"Super Hot","file":"wasabirub-super-hot.html","id":"super-hot","sku":"SUPERHOT","jar":"jar-hot.png","cls":"hot","tag":"Max heat","move":"Double capsaicin","price":"39.95","em":"hard.",
+ "hot":{"name":"Super Hot","file":"wasabirub-super-hot.html","id":"super-hot","sku":"SUPERHOT","jar":"jar-hot.webp","cls":"hot","tag":"Max heat","move":"Double capsaicin","price":"39.95","em":"hard.",
    "tagline":"Cools first, then heats up — twice the capsaicin for deep, lasting warmth when you push hard.",
    "actives":[("Menthol","10%","Cools"),("Capsaicin",".075%","Double heat"),("Methyl Salicylate","20%","Targets")],
    "band":"life-climb.jpg","band_line":"When you <em>push harder.</em>"},
- "cold":{"name":"Super Cold","file":"wasabirub-super-cold.html","id":"super-cold","sku":"ICETRARUB","jar":"jar-cold.png","cls":"cold","tag":"Pure cooling","move":"16% menthol","price":"39.95","em":"cool.",
+ "cold":{"name":"Super Cold","file":"wasabirub-super-cold.html","id":"super-cold","sku":"ICETRARUB","jar":"jar-cold.webp","cls":"cold","tag":"Pure cooling","move":"16% menthol","price":"39.95","em":"cool.",
    "tagline":"A high-strength menthol cream — pure, fast cooling with no warming phase, for fresh aches.",
    "actives":[("Menthol","16%","Cools hard"),("Cream base","—","Absorbs fast"),("Muscles + joints","—","Targets")],
    "band":"life-swim.jpg","band_line":"Cool it <em>down.</em>"},
@@ -135,7 +135,7 @@ home=f'''<header class="hero"><img id="hero-bg" class="hero-bg" src="assets/life
     <div class="badges"><span class="badge"><b>&check;</b> Pharmacist formulated</span><span class="badge"><b>&check;</b> TruShield Certified</span><span class="badge"><b>&check;</b> Tested for sport</span></div>
   </div>
   <div class="jar-vis"><span class="jar-disc"></span><span class="jar-shadow"></span><span class="geo g1">34.0195&deg;N</span><span class="geo g2">IN MOTION</span>
-    <img id="hero-jar" src="assets/jar-og.png" alt="WasabiRub Original jar"></div>
+    <img id="hero-jar" src="assets/jar-og.webp" alt="WasabiRub Original jar"></div>
 </div></header>
 
 <section class="band"><img id="band-photo" src="assets/life-finish.jpg" alt="Runners celebrating at a sunny finish line">
@@ -181,9 +181,9 @@ home=f'''<header class="hero"><img id="hero-bg" class="hero-bg" src="assets/life
   <p class="kicker">Belong in motion</p><h2 class="serif">Made for every body that moves.</h2>
   <p class="sub">No one thinks &ldquo;I&rsquo;m a pain-cream person.&rdquo; They think runner, lifter, pickleball-on-Sunday, keeping-up-with-the-kids. Whatever yours is &mdash; you belong here.</p>
   <div class="belong-grid">
-    <div class="btile"><img src="assets/life-sprint.jpg" alt=""></div><div class="btile"><img src="assets/life-cycle.jpg" alt=""></div>
-    <div class="btile"><img src="assets/life-climb.jpg" alt=""></div><div class="btile"><img src="assets/life-team.jpg" alt=""></div>
-    <div class="btile"><img src="assets/life-swim.jpg" alt=""></div><div class="btile"><img src="assets/life-yoga.jpg" alt=""></div>
+    <div class="btile"><img loading="lazy" src="assets/life-sprint.jpg" alt=""></div><div class="btile"><img loading="lazy" src="assets/life-cycle.jpg" alt=""></div>
+    <div class="btile"><img loading="lazy" src="assets/life-climb.jpg" alt=""></div><div class="btile"><img loading="lazy" src="assets/life-team.jpg" alt=""></div>
+    <div class="btile"><img loading="lazy" src="assets/life-swim.jpg" alt=""></div><div class="btile"><img loading="lazy" src="assets/life-yoga.jpg" alt=""></div>
   </div>
   <div class="movewords"><span class="lime">runners</span><span>lifters</span><span class="hot">picklers</span><span>skaters</span><span>swimmers</span><span class="lime">climbers</span><span>cyclists</span><span>hoopers</span><span class="hot">yogis</span><span>weekend warriors</span><span class="lime">comeback kids</span><span>every body</span></div>
   <form class="join" onsubmit="return false"><input type="email" placeholder="Join the movement &mdash; your email" aria-label="Email"><button type="submit">Join</button></form>
